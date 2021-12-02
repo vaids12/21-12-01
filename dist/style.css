@@ -52,6 +52,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 ul li {
@@ -67,6 +68,7 @@ h1 {
     text-align: center;
 
 }
+
 
 .flexContainer {
     display: flex;
@@ -167,16 +169,143 @@ h1 {
 input {
     margin: 0 auto;
     display: block;
-    padding-left: 30px;
+    /* padding-left: 25px; */
+    font-family: Arial, fontAwesome;
+
+
 }
 
-.iconPlaceholder {
+.input2 {
+    margin: 0 auto;
+    display: inline-block;
+    padding-left: 15px;
+
+
+}
+
+
+.icon::before {
+    content: "\f007";
     position: relative;
-
+    font-family: Arial, fontAwesome;
+    display: inline-block;
+    margin-right: -15px;
+    color: gray;
+    font-size: 10px;
 }
 
-.iconPlaceholder i {
-    position: absolute;
-    left: 755px;
-    bottom: 2px;
+
+.inputGroup {
+    display: flex;
+    justify-content: center;
 }
+
+table {
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+td {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+th {
+    height: 30px;
+}
+
+td:first-child {
+    width: 15px;
+}
+
+table,
+tr,
+td,
+th {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+thead tr {
+    background-color: burlywood;
+}
+
+tr:nth-child(even) {
+    background-color: burlywood;
+}
+
+tr:hover {
+    background-color: rgb(228, 159, 69);
+}
+
+/* Responsive  first section*/
+@media only screen and (max-width: 700px) {
+
+    .flexItem {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    section {
+        padding: 1%;
+    }
+
+    .flexBox {
+        width: 80%;
+        height: 50%;
+    }
+
+    .flexContainer {
+        flex-direction: column;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+
+    .absolutItem {
+        width: 50px;
+        height: 50px;
+    }
+
+    .first {
+        left: 100px;
+
+
+    }
+
+    .second {
+
+        top: 25px;
+        left: 25px;
+
+    }
+
+    .third {
+
+        top: 50px;
+        left: 50px;
+
+    }
+
+    .fourth {
+
+        top: 75px;
+        left: 75px;
+    }
+
+    .fifth {
+        top: -25px;
+
+    }
+}
+
+
+
+/* End of Responsive */
